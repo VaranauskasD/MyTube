@@ -8,10 +8,7 @@ import java.io.InputStream
 import java.net.HttpURLConnection
 import java.net.URL
 
-/**
- * Minimal [Downloader] NewPipeExtractor needs to perform HTTP calls itself.
- * No API key, no account — plain HTTP against YouTube's public pages.
- */
+/** Minimal [Downloader] NewPipeExtractor needs to perform its own HTTP calls. */
 class NewPipeDownloader : Downloader() {
 
     override fun execute(request: Request): Response {

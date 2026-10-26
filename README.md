@@ -1,5 +1,7 @@
 # MyTube
-Privacy first approach to navigating Youtube subscriptions without algorithms & shorts. Curate your Youtube feed privately without a Google account. Clicking out to your default browser to play videos and unsubscribing is as simple as removing a channel from your subscriptions list.
+Privacy first approach to navigating Youtube subscriptions without algorithms & shorts. Curate your Youtube feed privately without a Google account. Click out to your default browser to play videos. Unsubscribe with a single click.
+
+MyTube fetches channel and video data directly from YouTube's own servers (via NewPipeDownloader) and hands off to your browser or the YouTube app to actually play anything — it never signs in and never talks to any server of ours. That still means YouTube's servers see your IP address and which channels you're browsing, the same as visiting youtube.com while logged out. For stronger protection, we recommend using a VPN alongside this app.
 
 ## Installation
 
@@ -28,7 +30,3 @@ cd MyTube
 ```
 
 The debug APK lands at `app/build/outputs/apk/debug/app-debug.apk`. `./gradlew installDebug` builds and pushes it straight to a connected device over `adb`.
-
-## Releases
-
-Versioning follows [semver](https://semver.org). Each `vX.Y.Z` tag pushed to this repo triggers a GitHub Actions workflow that builds a signed release APK and publishes it as a GitHub Release — this is what Obtainium (and Option B above) consume.

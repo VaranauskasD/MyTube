@@ -1,3 +1,5 @@
+import com.android.build.api.variant.ApplicationAndroidComponentsExtension
+import com.android.build.api.variant.impl.VariantOutputImpl
 import java.io.FileInputStream
 import java.util.Properties
 
@@ -67,6 +69,14 @@ android {
     }
 }
 
+extensions.configure<ApplicationAndroidComponentsExtension> {
+    onVariants { variant ->
+        variant.outputs.forEach { output ->
+            (output as? VariantOutputImpl)?.outputFileName?.set("MyTube-$versionMajor.$versionMinor.$versionPatch.apk")
+        }
+    }
+}
+
 dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
@@ -79,7 +89,6 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-core")
 
-    // Pure-Kotlin/Java YouTube scraper — no API key, no account.
     implementation("com.github.teamnewpipe:NewPipeExtractor:v0.26.5")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
