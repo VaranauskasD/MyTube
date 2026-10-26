@@ -1,7 +1,28 @@
-node_modules/
-dist/
-*.log
-.DS_Store
+# Gradle
+.gradle/
+build/
+app/build/
+!gradle/wrapper/gradle-wrapper.jar
 
-# npm artifacts not used in this pnpm project
-package-lock.json
+# Local machine config (SDK path) — never portable across machines
+local.properties
+
+# Android Studio / IntelliJ project files
+.idea/
+*.iml
+
+# Native build intermediates
+.cxx/
+.externalNativeBuild/
+
+# Logs, captures, lint/profiling output
+*.log
+/captures/
+*.hprof
+
+# Signing keys — never commit these
+*.jks
+*.keystore
+keystore.properties
+
+.DS_Store
