@@ -1,7 +1,7 @@
 # MyTube
 Privacy first approach to navigating Youtube subscriptions without algorithms & shorts. Curate your Youtube feed privately without a Google account. Click out to your default browser to play videos. Unsubscribe with a single click.
 
-MyTube fetches channel and video data directly from YouTube's own servers (via (NewPipeDownloader)[https://github.com/teamnewpipe/newpipe]) and hands off to your browser or the YouTube app to actually play anything — it never signs in and never talks to any server of ours. That still means YouTube's servers see your IP address and which channels you're browsing, the same as visiting youtube.com while logged out. For stronger protection, recommend using a VPN alongside this app.
+MyTube fetches channel and video data directly from YouTube's own servers (via [NewPipeDownloader](https://github.com/teamnewpipe/newpipe)) and hands off to your browser or the YouTube app to actually play anything — it never signs in and never talks to any server of ours. That still means YouTube's servers see your IP address and which channels you're browsing, the same as visiting youtube.com while logged out. For stronger protection, recommend using a VPN alongside this app.
 
 ## Installation
 
